@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   root to: 'static#hi'
+
+  get '/peloton' => 'peloton#input'
+  post '/api'    => 'peloton#api'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

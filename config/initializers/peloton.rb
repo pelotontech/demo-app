@@ -8,5 +8,17 @@ module Peloton
     def wsdl
       CONFIG['wsdl']
     end
+
+    def client_id
+      CONFIG['client_id']
+    end
+
+    def account_name
+      CONFIG['account_name']
+    end
+
+    def password
+      CONFIG['password']
+    end
   end
 end

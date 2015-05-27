@@ -76,9 +76,6 @@ GEM
     httpi (2.4.0)
       rack
     i18n (0.7.0)
-    jbuilder (2.2.6)
-      activesupport (>= 3.0.0, < 5)
-      multi_json (~> 1.2)
     json (1.8.1)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
@@ -184,9 +181,7 @@ PLATFORMS
 
 DEPENDENCIES
   bower-rails
-  coffee-rails (~> 4.1.0)
   debugger
-  jbuilder (~> 2.0)
   pelokit!
   rails (= 4.2.0)
   sass-rails (~> 5.0)

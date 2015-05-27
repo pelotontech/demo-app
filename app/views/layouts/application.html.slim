@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title DemoApp
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    .container
+      .row
+        header
+          h1
+            a[href="/"] DemoApp
+      .row
+        = yield

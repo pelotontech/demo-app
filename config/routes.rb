@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :bank_accounts
+  resources :bank_accounts, path: '/'
 
-  root to: 'peloton#input'
+  # root to: 'peloton#input'
 
-  get '/peloton' => 'peloton#input'
-  post '/api'    => 'peloton#api'
+  # get '/peloton' => 'peloton#input'
+  # post '/api'    => 'peloton#api'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,37 @@
+h1 Listing bank_accounts
+
+table
+  thead
+    tr
+      th Bank account
+      th Bank account name
+      th Bank account owner
+      th Bank account type code
+      th Financial insitution number
+      th Branch transit number
+      th Account number
+      th Currency code
+      th Verify account by deposit
+      th
+      th
+      th
+
+  tbody
+    - @bank_accounts.each do |bank_account|
+      tr
+        td = bank_account.bank_account_id
+        td = bank_account.bank_account_name
+        td = bank_account.bank_account_owner
+        td = bank_account.bank_account_type_code
+        td = bank_account.financial_insitution_number
+        td = bank_account.branch_transit_number
+        td = bank_account.account_number
+        td = bank_account.currency_code
+        td = bank_account.verify_account_by_deposit
+        td = link_to 'Show', bank_account
+        td = link_to 'Edit', edit_bank_account_path(bank_account)
+        td = link_to 'Destroy', bank_account, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Bank account', new_bank_account_path

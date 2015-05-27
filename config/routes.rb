@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :bank_accounts
+
   root to: 'peloton#input'
 
   get '/peloton' => 'peloton#input'

@@ -32,7 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'savon'
+gem 'savon', '~> 2.11.0'
+gem 'pelokit', path: '/Users/dliggat/git/peloton/pelokit'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console

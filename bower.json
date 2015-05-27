@@ -1,0 +1,22 @@
+{
+  "name": "demo-app",
+  "version": "0.0.1",
+  "authors": [
+    "Dave Liggat <dave@liggat.org>"
+  ],
+  "description": "An example application for Peloton",
+  "license": "MIT",
+  "homepage": "http://peloton-technologies.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jquery-ujs": "~1.0.3",
+    "skeleton-css": "~2.0.4"
+  }
+}

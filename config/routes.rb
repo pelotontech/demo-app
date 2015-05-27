@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'static#hi'
+  root to: 'peloton#input'
 
   get '/peloton' => 'peloton#input'
   post '/api'    => 'peloton#api'

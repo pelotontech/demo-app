@@ -31,7 +31,15 @@ class BankAccountsController < ApplicationController
 
   # PATCH/PUT /bank_accounts/1
   def update
-    if @bank_account.update(bank_account_params)
+    if bank_account_params[:register] == 'true'
+      peloton = Peloton::BankAccount.new
+      paramy  = { client_id:        Peloton.client_id,
+                  account_name:     Peloton.account_name,
+                  password:         Peloton.password,
+                  application_name: Peloton.application_name }.merge(@bank_account.attributes.except("updated_at", "created_at"))
+      response = peloton.add_bank_account(paramy)
+      redirect_to @bank_account, notice: JSON.pretty_generate(response.body)
+    elsif @bank_account.update(bank_account_params)
       redirect_to @bank_account, notice: 'Bank account was successfully updated.'
     else
       render :edit
@@ -52,6 +60,6 @@ class BankAccountsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def bank_account_params
-      params.require(:bank_account).permit(:bank_account_id, :bank_account_name, :bank_account_owner, :bank_account_type_code, :financial_insitution_number, :branch_transit_number, :account_number, :currency_code, :verify_account_by_deposit)
+      params.require(:bank_account).permit(:bank_account_id, :bank_account_name, :bank_account_owner, :bank_account_type_code, :financial_insitution_number, :branch_transit_number, :account_number, :currency_code, :verify_account_by_deposit, :register)
     end
 end

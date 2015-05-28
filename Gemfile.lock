@@ -3,6 +3,7 @@ PATH
   specs:
     pelokit (0.0.1)
       activesupport
+      hashie
       savon (~> 2.11.0)
 
 GEM
@@ -72,6 +73,7 @@ GEM
       activesupport (>= 4.1.0)
     gyoku (1.3.1)
       builder (>= 2.1.2)
+    hashie (3.4.1)
     hike (1.2.3)
     httpi (2.4.0)
       rack

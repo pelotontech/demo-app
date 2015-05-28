@@ -32,13 +32,10 @@ class BankAccountsController < ApplicationController
   # PATCH/PUT /bank_accounts/1
   def update
     if bank_account_params[:register] == 'true'
-      peloton = Peloton::BankAccount.new
-      paramy  = { client_id:        Peloton.client_id,
-                  account_name:     Peloton.account_name,
-                  password:         Peloton.password,
-                  application_name: Peloton.application_name }.merge(@bank_account.attributes.except("updated_at", "created_at"))
-      response = peloton.add_bank_account(paramy)
+      peloton  = Pelokit::BankAccount.new @bank_account.api_properties
+      response = peloton.add
       redirect_to @bank_account, notice: JSON.pretty_generate(response.body)
+
     elsif @bank_account.update(bank_account_params)
       redirect_to @bank_account, notice: 'Bank account was successfully updated.'
     else

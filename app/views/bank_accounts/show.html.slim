@@ -1,4 +1,4 @@
-p#notice = notice
+pre#notice = notice
 
 p
   strong Bank account:
@@ -27,6 +27,10 @@ p
 p
   strong Verify account by deposit:
   = @bank_account.verify_account_by_deposit
+
+= form_for @bank_account, method: :put do |f|
+  = f.hidden_field :register, value: true
+  = f.submit "Register"
 
 = link_to 'Edit', edit_bank_account_path(@bank_account)
 '|

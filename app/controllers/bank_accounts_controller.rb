@@ -22,7 +22,6 @@ class BankAccountsController < ApplicationController
   # POST /bank_accounts
   def create
     @bank_account = BankAccount.new(bank_account_params)
-
     if @bank_account.save
       redirect_to @bank_account, notice: 'Bank account was successfully created.'
     else

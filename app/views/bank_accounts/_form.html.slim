@@ -1,0 +1,41 @@
+= form_for @bank_account do |f|
+  - if @bank_account.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@bank_account.errors.count, "error")} prohibited this bank_account from being saved:"
+      ul
+        - @bank_account.errors.full_messages.each do |message|
+          li = message
+
+  .row
+    .three.columns
+      = f.label :bank_account_id
+      = f.text_field :bank_account_id
+    .three.columns
+      = f.label :bank_account_name
+      = f.text_field :bank_account_name
+    .three.columns
+      = f.label :bank_account_owner
+      = f.text_field :bank_account_owner
+  hr
+  .row
+    .three.columns
+      = f.label :bank_account_type_code
+      = f.text_field :bank_account_type_code
+    .three.columns
+      = f.label :financial_insitution_number
+      = f.text_field :financial_insitution_number
+    .three.columns
+      = f.label :branch_transit_number
+      = f.text_field :branch_transit_number
+  hr
+  .row
+    .three.columns
+      = f.label :account_number
+      = f.text_field :account_number
+    .three.columns
+      = f.label :currency_code
+      = f.text_field :currency_code
+    .three.columns
+      = f.label :verify_account_by_deposit
+      = f.text_field :verify_account_by_deposit
+  .actions = f.submit

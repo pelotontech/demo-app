@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Bank account:
+  = @bank_account.bank_account_id
+p
+  strong Bank account name:
+  = @bank_account.bank_account_name
+p
+  strong Bank account owner:
+  = @bank_account.bank_account_owner
+p
+  strong Bank account type code:
+  = @bank_account.bank_account_type_code
+p
+  strong Financial insitution number:
+  = @bank_account.financial_insitution_number
+p
+  strong Branch transit number:
+  = @bank_account.branch_transit_number
+p
+  strong Account number:
+  = @bank_account.account_number
+p
+  strong Currency code:
+  = @bank_account.currency_code
+p
+  strong Verify account by deposit:
+  = @bank_account.verify_account_by_deposit
+
+= link_to 'Edit', edit_bank_account_path(@bank_account)
+'|
+= link_to 'Back', bank_accounts_path

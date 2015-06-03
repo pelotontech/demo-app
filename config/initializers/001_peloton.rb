@@ -20,8 +20,5 @@ module Peloton
       CONFIG['password']
     end
 
-    def application_name
-      CONFIG['application_name']
-    end
   end
 end

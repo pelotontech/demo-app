@@ -31,7 +31,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'savon', '~> 2.11.0'
-gem 'pelokit', path: '/Users/dliggat/git/peloton/pelokit'
+# gem 'pelokit', '0.0.3', path: '/Users/dliggat/git/peloton/pelokit'
+gem 'pelokit', git: 'https://github.com/pelotontech/pelokit.git', branch: 'alpha'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
@@ -40,7 +41,5 @@ group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
 end
 

@@ -1,5 +1,4 @@
 class BankAccount < ActiveRecord::Base
-  validates :bank_account_id, presence: true
   validates :bank_account_name, presence: true
   validates :bank_account_owner, presence: true
   validates :bank_account_type_code, presence: true

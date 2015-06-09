@@ -8,10 +8,7 @@
 
   .row
     .three.columns
-      = f.label :bank_account_id
-      = f.text_field :bank_account_id
-    .three.columns
-      = f.label :bank_account_name
+      = f.label :friendly_name
       = f.text_field :bank_account_name
     .three.columns
       = f.label :bank_account_owner
@@ -19,7 +16,7 @@
   hr
   .row
     .three.columns
-      = f.label :bank_account_type_code
+      = f.label 'type code (0=chq, 1=sav)'
       = f.text_field :bank_account_type_code
     .three.columns
       = f.label :financial_insitution_number

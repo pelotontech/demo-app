@@ -21,16 +21,20 @@ p
 p
   strong Account number:
   = @bank_account.account_number
-p
-  strong Currency code:
-  = @bank_account.currency_code
-p
-  strong Verify account by deposit:
-  = @bank_account.verify_account_by_deposit
 
-= form_for @bank_account, method: :put do |f|
-  = f.hidden_field :add_bank_account, value: true
-  = f.submit "Add Bank Account"
+hr
+h3 Peloton Operations
+.row
+  .three.columns
+    = form_for @bank_account, method: :put do |f|
+      = f.hidden_field :add_bank_account, value: true
+      = f.submit "Add Bank Account"
+  .three.columns
+    = form_for @bank_account, method: :put do |f|
+      = f.text_field :amount, value: 10.10
+      = f.hidden_field :deposit_funds, value: true
+      = f.submit "Deposit Funds"
+hr
 
 = link_to 'Edit', edit_bank_account_path(@bank_account)
 '|

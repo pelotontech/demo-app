@@ -10,8 +10,6 @@ table
       th Financial insitution number
       th Branch transit number
       th Account number
-      th Currency code
-      th Verify account by deposit
       th
       th
       th
@@ -26,8 +24,6 @@ table
         td = bank_account.financial_insitution_number
         td = bank_account.branch_transit_number
         td = bank_account.account_number
-        td = bank_account.currency_code
-        td = bank_account.verify_account_by_deposit
         td = link_to 'Show', bank_account
         td = link_to 'Edit', edit_bank_account_path(bank_account)
         td = link_to 'Destroy', bank_account, data: {:confirm => 'Are you sure?'}, :method => :delete

@@ -13,26 +13,20 @@
     .three.columns
       = f.label :bank_account_owner
       = f.text_field :bank_account_owner
-  hr
-  .row
     .three.columns
       = f.label 'type code (0=chq, 1=sav)'
       = f.text_field :bank_account_type_code
+  hr
+  .row
     .three.columns
       = f.label :financial_insitution_number
       = f.text_field :financial_insitution_number
     .three.columns
       = f.label :branch_transit_number
       = f.text_field :branch_transit_number
-  hr
-  .row
     .three.columns
       = f.label :account_number
       = f.text_field :account_number
-    .three.columns
-      = f.label :currency_code
-      = f.text_field :currency_code
-    .three.columns
-      = f.label :verify_account_by_deposit
-      = f.text_field :verify_account_by_deposit
-  .actions = f.submit
+  hr
+  .row
+    .actions = f.submit

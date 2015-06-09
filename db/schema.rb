@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527183128) do
+ActiveRecord::Schema.define(version: 20150609000551) do
 
   create_table "bank_accounts", force: :cascade do |t|
     t.string   "bank_account_id"
@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 20150527183128) do
     t.string   "financial_insitution_number"
     t.string   "branch_transit_number"
     t.string   "account_number"
-    t.string   "currency_code"
-    t.string   "verify_account_by_deposit"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end

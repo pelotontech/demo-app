@@ -1,7 +1,8 @@
-PATH
-  remote: /Users/dliggat/git/peloton/pelokit
+GIT
+  remote: https://github.com/pelotontech/pelokit.git
+  revision: 09fcc1e066421228f3fd343cbec3fb2ab8554901
   specs:
-    pelokit (1.0.0)
+    pelokit (1.1.0)
       activemodel
       activesupport
       hashie
@@ -184,7 +185,7 @@ PLATFORMS
 DEPENDENCIES
   bower-rails
   debugger
-  pelokit!
+  pelokit (~> 1.1.0)!
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   savon (~> 2.11.0)

@@ -32,7 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'savon', '~> 2.11.0'
 # gem 'pelokit', path: '/Users/dliggat/git/peloton/pelokit'
-gem 'pelokit', '~> 1.0.0', git: 'https://github.com/pelotontech/pelokit.git'
+gem 'pelokit', '~> 1.1.0', git: 'https://github.com/pelotontech/pelokit.git'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console

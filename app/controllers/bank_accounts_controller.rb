@@ -46,6 +46,14 @@ class BankAccountsController < ApplicationController
                                                      transfer_date:   Date.tomorrow.iso8601
       response = peloton.deposit
       redirect_to @bank_account, notice: JSON.pretty_generate(response)
+
+    elsif bank_account_params[:delete_bank_account] == 'true'
+
+      peloton  = Pelokit::BankAccount.new bank_account_id: @bank_account.bank_account_id
+      response = peloton.remove
+      response = response.marshal_dump if response.is_a? OpenStruct
+      redirect_to @bank_account, notice: JSON.pretty_generate(response)
+
     elsif @bank_account.update(bank_account_params)
       # Handle a regular PUT.
       redirect_to @bank_account, notice: 'Bank account was successfully updated.'
@@ -68,6 +76,6 @@ class BankAccountsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def bank_account_params
-      params.require(:bank_account).permit(:bank_account_id, :bank_account_name, :bank_account_owner, :bank_account_type_code, :financial_insitution_number, :branch_transit_number, :account_number, :add_bank_account, :deposit_funds, :amount)
+      params.require(:bank_account).permit(:bank_account_id, :bank_account_name, :bank_account_owner, :bank_account_type_code, :financial_insitution_number, :branch_transit_number, :account_number, :add_bank_account, :deposit_funds, :amount, :delete_bank_account)
     end
 end

@@ -34,6 +34,10 @@ h3 Peloton Operations
       = f.text_field :amount, value: 10.10
       = f.hidden_field :deposit_funds, value: true
       = f.submit "Deposit Funds"
+  .three.columns
+    = form_for @bank_account, method: :put do |f|
+      = f.hidden_field :delete_bank_account, value: true
+      = f.submit "Delete Bank Account"
 hr
 
 = link_to 'Edit', edit_bank_account_path(@bank_account)
